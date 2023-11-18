@@ -1,0 +1,15 @@
+{
+  "Prefixe": ["Mr.", "Mme.", "Mx."],
+  "Prénom": "Init",
+  "Nom": "Bachelor",
+  "E-mail": "fanderenanluce1984@gmail.com",
+  "Téléphone Mobile": "+33745552900",
+  "Ville": "Marseille",
+  "Code Postal": "13002",
+  "Obtenir simplement des renseignements": true,
+  "Recevoir le test de sélection dès l'ouverture des inscriptions": true,
+  "Campus": ["Marseille", "Cannes", "Toulon", "Martigues"],
+  "Année d'entrée souhaitée": ["1ere année", "2eme année", "3eme année"],
+  "Message": "page init bachelor",
+  "J'accepte de recevoir des informations de la part de La Plateforme": true
+}

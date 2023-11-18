@@ -1,0 +1,1 @@
+from forms_sender.pages_objects.informations import Informations_data
