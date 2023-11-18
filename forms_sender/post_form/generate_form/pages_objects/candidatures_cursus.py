@@ -1,19 +1,27 @@
 import os
 
-from forms_sender.json_parser.json_utils import load_json_from_URL
-
+from forms_sender.post_form.generate_form.json_parser.json_utils import (
+    load_json_from_URL,
+)
+from forms_sender.post_form.generate_form.pages_objects.custom_objects.profile import (
+    Profile,
+)
 
 class Candidatures_data:
-    def __init__(self, email: str, first_name: str, last_name: str):
+    def __init__(self, profile: Profile):
         self.path_to_preset: str = os.path.join(
-            "forms_sender", "pages_config", "candidatures_cursus.json"
+            "forms_sender",
+            "post_form" ,"generate_form",
+            "pages_objects",
+            "pages_config",
+            "candidatures_cursus.json",
         )
         self.preset: dict = load_json_from_URL(self.path_to_preset)
-        
-        self.first_name: str = first_name
-        self.last_name: str = last_name 
-        self.email: str = email
-        
+
+        self.first_name: str = profile.first_name
+        self.last_name: str = profile.last_name
+        self.email: str = profile.email
+
         self.title: str = self.preset["Prefixe"][0]
         self.first_name: str = self.preset["Prénom"]
         self.last_name: str = self.preset["Nom"]
@@ -21,7 +29,6 @@ class Candidatures_data:
         self.postal_code: str = self.preset["Code Postal"]
         self.country: str = self.preset["Pays"][0]
         self.phone_number: str = self.preset["Téléphone Mobile"]
-        self.reason: str = self.preset["Sélectionner un motif de contact"]
         self.get_info: bool = self.preset["Obtenir simplement des renseignements"]
         self.get_entry_test: bool = self.preset[
             "Recevoir le test de sélection dès l'ouverture des inscriptions"
@@ -36,9 +43,10 @@ class Candidatures_data:
         self.more_informations: bool = self.preset[
             "J'accepte de recevoir des informations de la part de La Plateforme"
         ]
+        self._create_header()
+        self._create_payload()
 
-
-    def create_header(self):
+    def _create_header(self):
         self.header: dict = {
             "Host": "laplateforme.io",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0",
@@ -58,7 +66,7 @@ class Candidatures_data:
             "Sec-Fetch-User": "?1",
         }
 
-    def create_payload(self):
+    def _create_payload(self):
         self.payload: str = f"""
 -----------------------------237980776240484970862145297709
 Content-Disposition: form-data; name="input_1.2"
