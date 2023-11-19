@@ -12,7 +12,8 @@ class Sender:
     def __init__(self, profile: Profile, target_url: str):
         self.target_url: str = target_url
         self.headers = Header(url=self.target_url, profile= profile)
-
+        self.success: bool | None = None
+        self.text_output: str | None = None
     def send_form(self):
         session: requests.Session = requests.Session()
         try:
