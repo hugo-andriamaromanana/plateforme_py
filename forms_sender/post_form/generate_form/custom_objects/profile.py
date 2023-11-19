@@ -1,7 +1,6 @@
-from forms_sender.post_form.generate_form.pages_objects.custom_objects.name import (
+from forms_sender.post_form.generate_form.custom_objects.profile import (
     Generate_name,
 )
-
 
 class Profile:
     def __init__(
