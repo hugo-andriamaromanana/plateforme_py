@@ -33,7 +33,7 @@ class Bachelor_data:
         self.get_entry_test: bool = self.preset[
             "Recevoir le test de sélection dès l'ouverture des inscriptions"
         ]
-        self.campus: str = self.preset["Campus souhaité"][0]
+        self.campus: str = self.preset["Campus"][0]
         self.desired_entree_year: str = self.preset["Année d'entrée souhaitée"][0]
         self.session: str = self.preset["Session de rentrée"][0]
         self.message: str = self.preset["Message"]

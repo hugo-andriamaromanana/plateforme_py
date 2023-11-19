@@ -25,4 +25,4 @@ class Sender:
         self.success: bool = response.status_code == 200
         self.text_output: str = response.text
         result = "[Sucess]" if self.success else "[Fail]"
-        return f"{result}\nResponse:{self.text_output}"
+        return f"\n{result}\nResponse:{self.text_output}"
