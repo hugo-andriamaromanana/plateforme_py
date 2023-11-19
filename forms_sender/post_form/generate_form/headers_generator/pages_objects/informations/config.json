@@ -1,16 +1,16 @@
 {
-    "Prefixe": ["Mr.", "Mme.", "Mx."],
-    "Prénom": "Inf",
-    "Nom": "ormations",
-    "E-mail": "fanderenanluce1984@gmail.com",
-    "Téléphone Mobile": "+33745552900",
-    "Sélectionner un motif de contact": [
-      "Relations Entreprises",
-      "Presse / Partenariat / Communication",
-      "Suivi de candidatures",
-      "Recrutement RH",
-      "Taxe d'apprentissage",
-      "Autre"
-    ],
-    "Message": "page informations"
-  }
+  "Prefixe": ["Mr.", "Mme.", "Mx."],
+  "Prénom": "Inf",
+  "Nom": "ormations",
+  "E-mail": "fanderenanluce1984@gmail.com",
+  "Téléphone Mobile": "+33745552900",
+  "Sélectionner un motif de contact": [
+    "Relations Entreprises",
+    "Presse / Partenariat / Communication",
+    "Suivi de candidatures",
+    "Recrutement RH",
+    "Taxe d'apprentissage",
+    "Autre"
+  ],
+  "Message": "page informations"
+}

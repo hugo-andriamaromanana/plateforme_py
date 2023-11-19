@@ -26,8 +26,6 @@ class Candidatures_data:
         self.email: str = profile.email
 
         self.title: str = self.preset["Prefixe"][0]
-        self.first_name: str = self.preset["Prénom"]
-        self.last_name: str = self.preset["Nom"]
         self.city: str = self.preset["Ville"]
         self.postal_code: str = self.preset["Code Postal"]
         self.country: str = self.preset["Pays"][0]

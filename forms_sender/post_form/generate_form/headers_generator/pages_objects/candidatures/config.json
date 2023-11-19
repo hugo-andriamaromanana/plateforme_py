@@ -10,7 +10,7 @@
   "Obtenir simplement des renseignements": "DEFAULT: TRUE",
   "Recevoir le test de sélection dès l'ouverture des inscriptions": "DEFAULT: TRUE",
   "Cursus souhaité": "DEFAULT: BACHELOR",
-  "Année d'entrée souhaitée": ["01","02","03"],
+  "Année d'entrée souhaitée": ["01", "02", "03"],
   "Campus souhaité": ["Marseille", "Cannes", "Toulon", "Martigues"],
   "Niveau Actuel": [
     "Sans diplôme",

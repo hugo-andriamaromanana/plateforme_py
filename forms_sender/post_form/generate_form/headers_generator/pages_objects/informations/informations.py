@@ -6,6 +6,8 @@ from forms_sender.post_form.generate_form.json_parser.json_utils import (
 from forms_sender.post_form.generate_form.custom_objects.profile import (
     Profile,
 )
+
+
 class Informations_data:
     def __init__(self):
         self.path_to_preset: str = os.path.join(

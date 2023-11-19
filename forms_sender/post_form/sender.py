@@ -11,8 +11,7 @@ from forms_sender.post_form.generate_form.headers_generator.headers import Heade
 class Sender:
     def __init__(self, profile: Profile, target_url: str):
         self.target_url: str = target_url
-        self.profile: Profile = profile
-        self.headers = Header(url=self.target_url)
+        self.headers = Header(url=self.target_url, profile= profile)
 
     def send_form(self):
         session: requests.Session = requests.Session()
@@ -24,6 +23,6 @@ class Sender:
         except:
             return f"[Fail] could not POST"
         self.success: bool = response.status_code == 200
-        self.text_output: str =  response.text
+        self.text_output: str = response.text
         result = "[Sucess]" if self.success else "[Fail]"
         return f"{result}\nResponse:{self.text_output}"
