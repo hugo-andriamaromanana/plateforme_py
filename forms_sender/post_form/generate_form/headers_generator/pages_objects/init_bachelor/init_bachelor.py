@@ -40,10 +40,6 @@ class Bachelor_data:
         self.more_informations: bool = self.preset[
             "J'accepte de recevoir des informations de la part de La Plateforme"
         ]
-        self._create_header()
-        self._create_payload()
-
-    def _create_header(self):
         self.header: dict = {
             "Host": "laplateforme.io",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0",
@@ -62,8 +58,6 @@ class Bachelor_data:
             "Sec-Fetch-Site": "same-origin",
             "Sec-Fetch-User": "?1",
         }
-
-    def _create_payload(self):
         self.payload: str = f"""
 -----------------------------207529738932190165601825061531
 Content-Disposition: form-data; name="input_1.2"
