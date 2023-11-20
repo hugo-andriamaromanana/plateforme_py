@@ -1,7 +1,7 @@
 # Exemples d'utilisation
 
 ## Modification du fichier config
-[Emplacement du fichier config](assets/config_location.png)
+![Emplacement du fichier config](assets/config_location.png)
 Ceci est le fichier a modifier avant l'execution du script
 
 ## Lancement du scipt
