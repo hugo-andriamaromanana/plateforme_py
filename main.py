@@ -36,4 +36,4 @@ def main(auto_reset_config: bool = False, test_mode: bool = True):
 
 
 if __name__ == "__main__":
-    main(auto_reset_config=False)
+    main(auto_reset_config=False, test_mode=True)

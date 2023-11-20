@@ -36,7 +36,7 @@ def send_form(form_url: str, profile: Profile, test_mode: bool) -> dict:
     }
 
 
-def send_multiple_forms(form_urls: list[str], profiles: list[Profile]) -> list[dict]:
+def send_multiple_forms(form_urls: list[str], profiles: list[Profile], test_mode: bool) -> list[dict]:
     """
     Send Inscriptions forms which each profiles to ALL specified urls
     so 3 profiles and 3 urls will result in 9 requests each between a 5s delay
@@ -63,6 +63,7 @@ def send_multiple_forms(form_urls: list[str], profiles: list[Profile]) -> list[d
     logs: list = []
     for url in form_urls:
         for profile in profiles:
-            logs.append(send_form(url, profile))
-            time.sleep(5)
+            logs.append(send_form(url, profile, test_mode))
+            print(f"[done] posted profile, waiting 3s")
+            time.sleep(3)
     return logs

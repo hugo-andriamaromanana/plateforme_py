@@ -2,14 +2,30 @@
   "send_profile": {
     "profile": {
       "auto": false,
-      "first_name": "Hugo",
-      "last_name": "ANdira",
-      "email": "g"
+      "first_name": "",
+      "last_name": "",
+      "email": ""
     },
-    "url": "https://laplateforme.io/candidatures-cursus/"
+    "url": ""
   },
   "send_multiple_profiles": {
-    "profiles": [],
-    "urls": []
+    "profiles": [
+      {
+        "auto": true,
+        "first_name": "",
+        "last_name": "",
+        "email": "mon/adresse/mail/@gmail.com"
+      },
+      {
+        "auto": false,
+        "first_name": "Leo",
+        "last_name": "Triangle",
+        "email": "mon/adresse/mail/differente@gmail.com"
+      }
+    ],
+    "urls": [
+      "https://laplateforme.io/candidatures-cursus/",
+      "https://laplateforme.io/bachelor-it/init-bachelor/"
+    ]
   }
 }

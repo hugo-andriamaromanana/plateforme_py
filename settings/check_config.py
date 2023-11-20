@@ -76,7 +76,7 @@ class Checker:
             multiple_mails: list[str] | list[None] = [
                 all_profiles[index].get(EMAIL) for index in range(len(all_profiles))
             ]
-            return not (isinstance(multiple_mails, list[None]))
+            return multiple_mails[0] is not None
         single_mail: str | None = PARAMS[SEND_PROFILE][PROFILE].get(EMAIL)
         return single_mail != ""
 
@@ -85,7 +85,7 @@ class Checker:
         urls: list = []
         send_profiles: list[dict] = PARAMS[SEND_MULTIPLE_PROFILES][PROFILES]
         for tag in send_profiles:
-            first_name: str = tag.get[FIRST_NAME]
+            first_name: str = tag.get(FIRST_NAME)
             last_name: str = tag.get(LAST_NAME)
             email: str = tag.get(EMAIL)
             is_auto: str = tag.get(AUTO)
