@@ -1,3 +1,8 @@
+# Installation requise
+
+- Python
+- Faker ```pip install Faker```
+
 # Exemples d'utilisation
 
 ## Modification du fichier config
@@ -22,8 +27,3 @@ auto_reset_config: lorsque set a True, le fichier de config modifiable se remett
 ![Exemple d'un envoi d'un form](assets/good_single.png "Exemple d'un envoi d'un form")
 - A noter, auto = true ou false, est l'ajout d'un nom généré automatiquement
 - Le script en fonctionnne uniquement qu'avec un envoie singulier ou multiple **pas les deux**
-
-# Installation requise
-
-- Python
-- Faker ```pip install Faker```
