@@ -1,4 +1,3 @@
-from forms_sender.settings.config import PARAMS
 from forms_sender.post_form.sender import Sender
 from forms_sender.post_form.generate_form.custom_objects.profile import (
     Profile,
@@ -22,9 +21,9 @@ def send_form(form_url: str, profile: Profile) -> dict:
         got there
     """
     sender = Sender(profile=profile, target_url=form_url)
-    sender.send_form()
-    current_date = date.today()
-    current_time = (datetime.now()).strftime("%H:%M:%S")
+    # sender.send_form()
+    current_date = date.today().strftime("%b-%d-%Y")
+    current_time = datetime.now().strftime("%H:%M:%S")
     return {
         "date": current_date,
         "time": current_time,
@@ -39,7 +38,7 @@ def send_form(form_url: str, profile: Profile) -> dict:
 def send_multiple_forms(form_urls: list[str], profiles: list[Profile]) -> list[dict]:
     """
     Send Inscriptions forms which each profiles to ALL specified urls
-    so 3 profiles and 3 urls will result in 9 requests
+    so 3 profiles and 3 urls will result in 9 requests each between a 5s delay
 
     Args:
         form_urls: the array of targeted urls
@@ -50,15 +49,15 @@ def send_multiple_forms(form_urls: list[str], profiles: list[Profile]) -> list[d
 
     Example:
         send_multiple_forms(array_of_url, array_of_all_profiles)
-        >>> [
-            {
+        >>> [{
         "date": current date,
         "time": current time,
         "first_name": first name,
         "last_name": last name,
         "email": email,
         "sucess": success,
-        "log": text_output,},{...}]
+        "log": text_output
+        ,},{...}]
     """
     logs: list = []
     for url in form_urls:

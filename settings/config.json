@@ -1,0 +1,13 @@
+{
+  "send_profile": {
+    "first_name": "Hugo",
+    "last_name": "Hugo",
+    "email": "hugo",
+    "url": "https://laplateforme.io/candidatures-cursus/"
+  },
+  "send_multiple_profiles": {
+    "auto": null,
+    "profiles": [""],
+    "urls": []
+  }
+}

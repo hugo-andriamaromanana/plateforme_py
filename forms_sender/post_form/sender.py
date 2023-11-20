@@ -1,6 +1,6 @@
 import requests
 
-from forms_sender.settings.config import PARAMS
+from settings.config import PARAMS
 from forms_sender.post_form.generate_form.custom_objects.profile import (
     Profile,
 )
@@ -16,14 +16,8 @@ class Sender:
         self.text_output: str | None = None
     def send_form(self):
         session: requests.Session = requests.Session()
-        try:
-            response: requests.Response = session.post(
+        response: requests.Response = session.post(
                 self.target_url, headers=self.headers.header, data=self.headers.payload
             )
-            print(f"[Sucess] POST made")
-        except:
-            return f"[Fail] could not POST"
         self.success: bool = response.status_code == 200
         self.text_output: str = response.text
-        result = "[Sucess]" if self.success else "[Fail]"
-        return f"\n{result}\nResponse:{self.text_output}"
