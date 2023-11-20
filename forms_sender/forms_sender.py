@@ -6,7 +6,7 @@ import time
 from datetime import datetime, date
 
 
-def send_form(form_url: str, profile: Profile) -> dict:
+def send_form(form_url: str, profile: Profile, test_mode: bool) -> dict:
     """
     Send a inscription form with the corresponding profile to the specified
     url if it's in the db and returns the reponse log as a dictionnary
@@ -21,7 +21,8 @@ def send_form(form_url: str, profile: Profile) -> dict:
         got there
     """
     sender = Sender(profile=profile, target_url=form_url)
-    # sender.send_form()
+    if not test_mode:
+        sender.send_form()
     current_date = date.today().strftime("%b-%d-%Y")
     current_time = datetime.now().strftime("%H:%M:%S")
     return {

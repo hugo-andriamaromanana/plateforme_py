@@ -19,4 +19,4 @@ class Http_header:
             "https://laplateforme.io/candidatures-cursus/": Candidatures_data,
             "https://laplateforme.io/bachelor-it/init-bachelor/": Bachelor_data,
         }
-        self.http_header = flags[url](profile)
+        self.http_header = (flags[url])(profile = profile)

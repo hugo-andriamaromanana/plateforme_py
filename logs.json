@@ -1,16 +1,2 @@
-{
-    "single_send": {
-        "profile": {
-            "auto": false,
-            "first_name": "",
-            "last_name": "",
-            "email": ""
-        },
-        "url": ""
-    },
-    "send_multiple_profiles": {
-        "auto": false,
-        "profiles": [],
-        "urls": []
-    }
-}
+[
+]

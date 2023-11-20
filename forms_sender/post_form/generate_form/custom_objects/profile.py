@@ -16,3 +16,12 @@ class Profile:
         else:
             self.first_name, self.last_name = first_name, last_name
         self.email = email
+
+    def show(self):
+        print(
+            {
+                "first_name": self.first_name,
+                "last_name": self.last_name,
+                "email": self.email,
+            }
+        )
