@@ -1,5 +1,9 @@
 {
-  "Prefixe": ["Mr.", "Mme.", "Mx."],
+  "Prefixe": [
+    "Mr.",
+    "Mme.",
+    "Mx."
+  ],
   "Prénom": "Init",
   "Nom": "Bachelor",
   "E-mail": "fanderenanluce1984@gmail.com",
@@ -8,9 +12,21 @@
   "Code Postal": "13002",
   "Obtenir simplement des renseignements": "DEFAULT: TRUE",
   "Recevoir le test de sélection dès l'ouverture des inscriptions": "DEFAULT: TRUE",
-  "Campus": ["Marseille", "Cannes", "Toulon", "Martigues"],
-  "Année d'entrée souhaitée": ["1ere année", "2eme année", "3eme année"],
-  "Session de rentrée" : ["Février 2024", "Septembre 2024"],
+  "Campus": [
+    "Marseille",
+    "Cannes",
+    "Toulon",
+    "Martigues"
+  ],
+  "Année d'entrée souhaitée": [
+    "1ere année",
+    "2eme année",
+    "3eme année"
+  ],
+  "Session de rentrée": [
+    "Février 2024",
+    "Septembre 2024"
+  ],
   "Message": "page init bachelor",
   "J'accepte de recevoir des informations de la part de La Plateforme": "DEFAULT: TRUE"
 }

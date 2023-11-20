@@ -12,6 +12,7 @@ from forms_sender.post_form.generate_form.custom_objects.profile import (
     Profile,
 )
 
+
 class Http_header:
     def __init__(self, url: str, profile: Profile):
         flags = {
@@ -19,4 +20,4 @@ class Http_header:
             "https://laplateforme.io/candidatures-cursus/": Candidatures_data,
             "https://laplateforme.io/bachelor-it/init-bachelor/": Bachelor_data,
         }
-        self.http_header = (flags[url])(profile = profile)
+        self.http_header = (flags[url])(profile=profile)

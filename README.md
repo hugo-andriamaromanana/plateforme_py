@@ -23,6 +23,7 @@ auto_reset_config: lorsque set a True, le fichier de config modifiable se remett
 ## Exemples
 ### Exemple d'un envoi multiple
 ![Exemple d'un envoi multiple](assets/good_example_multiple.png "Exemple d'un envoi multiple")
+
 ### Exemple d'un envoi d'un form
 ![Exemple d'un envoi d'un form](assets/good_single.png "Exemple d'un envoi d'un form")
 - A noter, auto = true ou false, est l'ajout d'un nom généré automatiquement

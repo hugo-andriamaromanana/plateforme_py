@@ -1,5 +1,9 @@
 {
-  "Prefixe": ["Mr.", "Mme.", "Mx."],
+  "Prefixe": [
+    "Mr.",
+    "Mme.",
+    "Mx."
+  ],
   "Prénom": "Inf",
   "Nom": "ormations",
   "E-mail": "fanderenanluce1984@gmail.com",

@@ -1,17 +1,36 @@
 {
-  "Prefixe": ["Mr.", "Mme.", "Mx."],
+  "Prefixe": [
+    "Mr.",
+    "Mme.",
+    "Mx."
+  ],
   "Prénom": "candidatures",
   "Nom": "cursus",
   "E-mail": "fanderenanluce1984@gmail.com",
   "Ville": "Marseille",
   "Code Postal": "13002",
-  "Pays": ["France", "Belgique", "Suisse", "Luxembourg", "Canada"],
+  "Pays": [
+    "France",
+    "Belgique",
+    "Suisse",
+    "Luxembourg",
+    "Canada"
+  ],
   "Téléphone Mobile": "+33745552900",
   "Obtenir simplement des renseignements": "DEFAULT: TRUE",
   "Recevoir le test de sélection dès l'ouverture des inscriptions": "DEFAULT: TRUE",
   "Cursus souhaité": "DEFAULT: BACHELOR",
-  "Année d'entrée souhaitée": ["01", "02", "03"],
-  "Campus souhaité": ["Marseille", "Cannes", "Toulon", "Martigues"],
+  "Année d'entrée souhaitée": [
+    "01",
+    "02",
+    "03"
+  ],
+  "Campus souhaité": [
+    "Marseille",
+    "Cannes",
+    "Toulon",
+    "Martigues"
+  ],
   "Niveau Actuel": [
     "Sans diplôme",
     "Niveau BAC",
