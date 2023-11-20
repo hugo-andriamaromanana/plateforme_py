@@ -1,4 +1,16 @@
 import sys
+from consts import (
+    SEND_MULTIPLE_PROFILES,
+    SEND_PROFILE,
+    EMAIL,
+    FIRST_NAME,
+    LAST_NAME,
+    URL,
+    URLS,
+    PROFILES,
+    PROFILE,
+    AUTO,
+)
 
 from settings.config import (
     PARAMS,
@@ -20,10 +32,10 @@ class Checker:
         return True
 
     def generate_for_single(self):
-        send_profile: str = PARAMS["send_profile"]
-        email: str = send_profile["email"]
-        first_name: str = send_profile["first_name"]
-        last_name: str = send_profile["last_name"]
+        send_profile: str = PARAMS[SEND_PROFILE]
+        email: str = send_profile[EMAIL]
+        first_name: str = send_profile[FIRST_NAME]
+        last_name: str = send_profile[LAST_NAME]
 
         self.profile: Profile = Profile(
             auto_generate_name=self.is_auto,
@@ -32,19 +44,19 @@ class Checker:
             email=email,
         )
 
-        self.url: str = send_profile["url"]
+        self.url: str = send_profile[URL]
 
     def generate_for_multiple(self):
-        self.profile = []
-        send_profiles: int | list[str] = PARAMS["send_multiple_profiles"]["profiles"]
+        is_auto = PARAMS[SEND_MULTIPLE_PROFILES][AUTO]
+        send_profiles: int | list[str] = PARAMS[SEND_MULTIPLE_PROFILES][PROFILES]
         for tag in send_profiles:
             email: str = tag
-            if self.is_auto:
+            if is_auto:
                 first_name: str = ""
                 first_name: str = ""
             else:
-                first_name: str = tag["first_name"]
-                last_name: str = tag["last_name"]
+                first_name: str = tag[FIRST_NAME]
+                last_name: str = tag[LAST_NAME]
                 self.profile.append(
                     Profile(
                         auto_generate_name=self.is_auto,
@@ -53,14 +65,14 @@ class Checker:
                         email=email,
                     )
                 )
-                self.url: str = PARAMS["send_multiple_profiles"]["urls"]
+                self.url: str = PARAMS[SEND_MULTIPLE_PROFILES][URLS]
 
     def are_name_auto(self):
         is_empty_single: bool = (
-            PARAMS["send_profile"]["first_name"] == ""
-            and PARAMS["send_profile"]["last_name"] == ""
+            PARAMS[SEND_PROFILE][FIRST_NAME] == ""
+            and PARAMS[SEND_PROFILE][LAST_NAME] == ""
         )
-        is_empty_multiple: bool = PARAMS["send_multiple_profiles"]["auto"] is None
+        is_empty_multiple: bool = PARAMS[SEND_MULTIPLE_PROFILES][AUTO] is None
 
         return is_empty_multiple or is_empty_single
 
@@ -86,12 +98,12 @@ class Checker:
         if log_multiple ^ log_single:
             if log_single:
                 self.is_auto: bool = (
-                    PARAMS["send_profile"]["first_name"] == ""
-                    and PARAMS["send_profile"]["last_name"] == ""
+                    PARAMS[SEND_PROFILE][FIRST_NAME] == ""
+                    and PARAMS[SEND_PROFILE][LAST_NAME] == ""
                 )
                 print("[detected] single send")
             else:
-                self.is_auto: bool = PARAMS["send_multiple_profiles"]["auto"] is None
+                self.is_auto: bool = PARAMS[SEND_MULTIPLE_PROFILES][AUTO] is None
                 print("[detected] multiple sends")
             self.is_single: bool = log_single
             print(self.is_single)
@@ -101,5 +113,5 @@ class Checker:
             sys.exit(0)
 
     def _check_no_config(self, is_single: bool) -> list:
-        door: str = "send_profile" if is_single else "send_multiple_profiles"
-        return not(PARAMS[door] == DEFAULT_PARAMS[door])
+        door: str = SEND_PROFILE if is_single else SEND_MULTIPLE_PROFILES
+        return not (PARAMS[door] == DEFAULT_PARAMS[door])

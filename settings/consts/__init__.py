@@ -1,0 +1,1 @@
+from settings.consts.str_consts import *
